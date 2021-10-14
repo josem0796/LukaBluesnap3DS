@@ -152,7 +152,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3929F73C2718C1BF005FCB42 /* Source */ = {
+		3929F73C2718C1BF005FCB42 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				3929F7462718C20E005FCB42 /* ApiResponse.swift */,
@@ -170,7 +170,7 @@
 				3929F7442718C20E005FCB42 /* TransactionHandler.swift */,
 				3929F74C2718C20F005FCB42 /* Types.swift */,
 			);
-			path = Source;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		52C03D88BCF95B6D1BF6A5A63043E273 /* Development Pods */ = {
@@ -192,7 +192,7 @@
 		6EC09792236FDE4A3E42374F2F13BDA0 /* LukaSDK */ = {
 			isa = PBXGroup;
 			children = (
-				3929F73C2718C1BF005FCB42 /* Source */,
+				3929F73C2718C1BF005FCB42 /* Classes */,
 				9F447AF2BCFB5641CF99E7EC2ECA94E2 /* Pod */,
 				F818418CBD941D35495295631E3CE585 /* Support Files */,
 			);
