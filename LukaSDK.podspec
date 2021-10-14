@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.1'
 
-  s.source_files = 'LukaSDK/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   s.swift_version = '5'
   
