@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		36406B3A853260668297B0932CFEEFED /* Pods-LukaSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48CC6D96CB595874FBF444CDE0099A5D /* Pods-LukaSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3714BC74AF4B806C87BB17838840F0AE /* LukaSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2744C12B3B7BE0954D9538EAD0622CC /* LukaSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3929F74D2718C20F005FCB42 /* LukaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F73D2718C20D005FCB42 /* LukaApi.swift */; };
+		3929F74E2718C20F005FCB42 /* LukaSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F73E2718C20D005FCB42 /* LukaSession.swift */; };
+		3929F74F2718C20F005FCB42 /* Luka in Resources */ = {isa = PBXBuildFile; fileRef = 3929F73F2718C20D005FCB42 /* Luka */; };
+		3929F7502718C20F005FCB42 /* Luka.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F7402718C20D005FCB42 /* Luka.swift */; };
+		3929F7512718C20F005FCB42 /* LukaCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F7412718C20E005FCB42 /* LukaCurrency.swift */; };
+		3929F7522718C20F005FCB42 /* LukaApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F7422718C20E005FCB42 /* LukaApiConfig.swift */; };
+		3929F7532718C20F005FCB42 /* Exceptions in Resources */ = {isa = PBXBuildFile; fileRef = 3929F7432718C20E005FCB42 /* Exceptions */; };
+		3929F7542718C20F005FCB42 /* TransactionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F7442718C20E005FCB42 /* TransactionHandler.swift */; };
+		3929F7552718C20F005FCB42 /* Bluesnap in Resources */ = {isa = PBXBuildFile; fileRef = 3929F7452718C20E005FCB42 /* Bluesnap */; };
+		3929F7562718C20F005FCB42 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F7462718C20E005FCB42 /* ApiResponse.swift */; };
+		3929F7572718C20F005FCB42 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 3929F7472718C20F005FCB42 /* Models */; };
+		3929F7582718C20F005FCB42 /* Transaction in Resources */ = {isa = PBXBuildFile; fileRef = 3929F7482718C20F005FCB42 /* Transaction */; };
+		3929F75A2718C20F005FCB42 /* Bridge in Resources */ = {isa = PBXBuildFile; fileRef = 3929F74A2718C20F005FCB42 /* Bridge */; };
+		3929F75C2718C20F005FCB42 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F74C2718C20F005FCB42 /* Types.swift */; };
 		3B0D206113EFB6579248C8F33A6D135D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		64727D7F5D4D1733179EC5D0C8D5006B /* LukaSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC36D49E42BD1F31266C42B55C880C00 /* LukaSDK-dummy.m */; };
 		98E61A07156E1BA139FECA96D9FDDD4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -43,6 +57,20 @@
 		23377419AF4AC9A2E93A368DAFE7FC0C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2BD2E2E0F35ABD068A63875DC28A04C8 /* Pods-LukaSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LukaSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		3735D2F117A6DBD5778483EE90CFF704 /* Pods-LukaSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LukaSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3929F73D2718C20D005FCB42 /* LukaApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LukaApi.swift; sourceTree = "<group>"; };
+		3929F73E2718C20D005FCB42 /* LukaSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LukaSession.swift; sourceTree = "<group>"; };
+		3929F73F2718C20D005FCB42 /* Luka */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Luka; sourceTree = "<group>"; };
+		3929F7402718C20D005FCB42 /* Luka.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Luka.swift; sourceTree = "<group>"; };
+		3929F7412718C20E005FCB42 /* LukaCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LukaCurrency.swift; sourceTree = "<group>"; };
+		3929F7422718C20E005FCB42 /* LukaApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LukaApiConfig.swift; sourceTree = "<group>"; };
+		3929F7432718C20E005FCB42 /* Exceptions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Exceptions; sourceTree = "<group>"; };
+		3929F7442718C20E005FCB42 /* TransactionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHandler.swift; sourceTree = "<group>"; };
+		3929F7452718C20E005FCB42 /* Bluesnap */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bluesnap; sourceTree = "<group>"; };
+		3929F7462718C20E005FCB42 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		3929F7472718C20F005FCB42 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		3929F7482718C20F005FCB42 /* Transaction */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Transaction; sourceTree = "<group>"; };
+		3929F74A2718C20F005FCB42 /* Bridge */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bridge; sourceTree = "<group>"; };
+		3929F74C2718C20F005FCB42 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		4376193D70F3BCF6EECCA27D428F43E5 /* Pods-LukaSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LukaSDK_Example.modulemap"; sourceTree = "<group>"; };
 		48CC6D96CB595874FBF444CDE0099A5D /* Pods-LukaSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LukaSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		49666E73FA243E430544E279B9AE7599 /* Pods_LukaSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LukaSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +152,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3929F73C2718C1BF005FCB42 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3929F7462718C20E005FCB42 /* ApiResponse.swift */,
+				3929F7452718C20E005FCB42 /* Bluesnap */,
+				3929F74A2718C20F005FCB42 /* Bridge */,
+				3929F7432718C20E005FCB42 /* Exceptions */,
+				3929F73F2718C20D005FCB42 /* Luka */,
+				3929F7402718C20D005FCB42 /* Luka.swift */,
+				3929F73D2718C20D005FCB42 /* LukaApi.swift */,
+				3929F7422718C20E005FCB42 /* LukaApiConfig.swift */,
+				3929F7412718C20E005FCB42 /* LukaCurrency.swift */,
+				3929F73E2718C20D005FCB42 /* LukaSession.swift */,
+				3929F7472718C20F005FCB42 /* Models */,
+				3929F7482718C20F005FCB42 /* Transaction */,
+				3929F7442718C20E005FCB42 /* TransactionHandler.swift */,
+				3929F74C2718C20F005FCB42 /* Types.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		52C03D88BCF95B6D1BF6A5A63043E273 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +192,7 @@
 		6EC09792236FDE4A3E42374F2F13BDA0 /* LukaSDK */ = {
 			isa = PBXGroup;
 			children = (
+				3929F73C2718C1BF005FCB42 /* Source */,
 				9F447AF2BCFB5641CF99E7EC2ECA94E2 /* Pod */,
 				F818418CBD941D35495295631E3CE585 /* Support Files */,
 			);
@@ -314,6 +364,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					3F650DF35D03DF36F80A57F9918839FF = {
+						LastSwiftMigration = 1250;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -347,6 +402,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3929F7532718C20F005FCB42 /* Exceptions in Resources */,
+				3929F75A2718C20F005FCB42 /* Bridge in Resources */,
+				3929F7552718C20F005FCB42 /* Bluesnap in Resources */,
+				3929F7572718C20F005FCB42 /* Models in Resources */,
+				3929F7582718C20F005FCB42 /* Transaction in Resources */,
+				3929F74F2718C20F005FCB42 /* Luka in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +426,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				64727D7F5D4D1733179EC5D0C8D5006B /* LukaSDK-dummy.m in Sources */,
+				3929F7542718C20F005FCB42 /* TransactionHandler.swift in Sources */,
+				3929F74E2718C20F005FCB42 /* LukaSession.swift in Sources */,
+				3929F7502718C20F005FCB42 /* Luka.swift in Sources */,
+				3929F7522718C20F005FCB42 /* LukaApiConfig.swift in Sources */,
+				3929F7562718C20F005FCB42 /* ApiResponse.swift in Sources */,
+				3929F7512718C20F005FCB42 /* LukaCurrency.swift in Sources */,
+				3929F75C2718C20F005FCB42 /* Types.swift in Sources */,
+				3929F74D2718C20F005FCB42 /* LukaApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66F3C5F68F3B471FE5154EC57288981A /* LukaSDK.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -589,6 +659,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -661,6 +732,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92CBDBCF2D2A9155B236D5E409B75199 /* LukaSDK.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";

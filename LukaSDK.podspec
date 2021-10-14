@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/josegmanzanares/LukaSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.1'
 
   s.source_files = 'LukaSDK/Classes/**/*'
   
@@ -39,4 +39,10 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.dependency 'RxSwift', '~> 6.2.0'
+  s.dependency 'Alamofire', '~> 5.4'
+  s.dependency 'BluesnapSDK', '~> 1.3.8'
+  s.dependency 'RxRelay', '~> 0.1.2'
+  
 end
