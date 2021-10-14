@@ -1,0 +1,16 @@
+PODS:
+  - LukaSDK (0.1.0)
+
+DEPENDENCIES:
+  - LukaSDK (from `../`)
+
+EXTERNAL SOURCES:
+  LukaSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LukaSDK: d38908fc89f125ebc7caba64828eae4d2e8abb1f
+
+PODFILE CHECKSUM: ed9881d74ecc65851fdcc5ff600dcb92591da070
+
+COCOAPODS: 1.10.0
