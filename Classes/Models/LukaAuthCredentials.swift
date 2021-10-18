@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LukaAuthCredentials: Codable {
+public class LukaAuthCredentials: Codable {
     
     var userName: String
     var password: String

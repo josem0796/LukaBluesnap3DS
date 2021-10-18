@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import Alamofire
 
-internal class LukaApi {
+public class LukaApi {
     
     private let credentials = LukaAuthCredentials()
     internal var currentSession: LukaSession? = nil
