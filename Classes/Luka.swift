@@ -18,7 +18,7 @@ public class Luka {
         // private init to avoid multiple instances
     }
     
-    static func initialize(credentials: LukaAuthCredentials, forDebug: Bool) -> LukaApi {
+    public static func initialize(credentials: LukaAuthCredentials, forDebug: Bool) -> LukaApi {
         generateLukaApi(forDebug: forDebug)
         shared.authenticate(credentials: credentials)
         return shared
