@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LukaTransactionProgress {
+public struct LukaTransactionProgress {
     let acton: LukaPaymentStep
     let traceId: String?
     let handler: TransactionHandler

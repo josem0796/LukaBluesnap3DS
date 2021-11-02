@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal class ApiResponse<T> {
+public class ApiResponse<T> {
     
     let data: T?
     let error: Error?

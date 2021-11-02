@@ -34,7 +34,7 @@ public class LukaPaymentParams {
      */
     var enable3DSecureAuthentication: Bool = false
     
-    public init(method: LukaMethod, amount: Double, currency: LukaCurrency, email: String? = nil, enable3DSecureAuthentication: Bool = false) {
+    public init(method: CreditCardMethod, amount: Double, currency: LukaCurrency, email: String? = nil, enable3DSecureAuthentication: Bool = false) {
         self.method = method
         self.amount = amount
         self.currency = currency

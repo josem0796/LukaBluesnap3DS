@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LukaPaymentResult {
+public struct LukaPaymentResult {
     
     let method: LukaMethod
     let amount: Double

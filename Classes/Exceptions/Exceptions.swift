@@ -17,7 +17,7 @@ public enum LukaErrors: Error {
     case apiErrorResponse
 }
 
-struct ApiError : Codable {
+public struct ApiError : Codable {
     
     let message: String
     let code: Int

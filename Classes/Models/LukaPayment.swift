@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LukaPayment: Codable {
+public struct LukaPayment: Codable {
     
     let channel: String
     let description: String

@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-internal class LukaPaymentRequest {
+public class LukaPaymentRequest {
     
     let params: LukaPaymentParams
     let api: LukaApi
