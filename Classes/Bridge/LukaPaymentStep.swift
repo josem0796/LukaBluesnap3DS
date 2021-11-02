@@ -10,7 +10,7 @@ import Foundation
 /**
  Current payment step
  */
-internal enum LukaPaymentStep {
+public enum LukaPaymentStep {
     
     /// Setup payment before start
     case setup

@@ -9,7 +9,7 @@ import Foundation
 
 public struct LukaPaymentResult {
     
-    public let method: LukaMethod
+    public let method: CreditCardMethod
     public let amount: Double
     public let currency: LukaCurrency
     public let traceId: String

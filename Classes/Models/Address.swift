@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Address: Codable {
+public struct Address: Codable {
     
-    let city: String?
-    let address: String?
-    let zipCode: String?
-    let state: String?
-    let countryId: UInt64?
+    public let city: String?
+    public let address: String?
+    public let zipCode: String?
+    public let state: String?
+    public let countryId: UInt64?
     
     enum CodingKeys: String, CodingKey {
         case city = "Ciudad"
