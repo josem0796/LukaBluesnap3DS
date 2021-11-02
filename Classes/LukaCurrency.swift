@@ -9,8 +9,8 @@ import Foundation
 
 public struct LukaCurrency: Codable {
     
-    let iso: String
-    let symbol: String
+    public let iso: String
+    public let symbol: String
     
     public static let usd = LukaCurrency(iso: "USD", symbol: "$")
     
