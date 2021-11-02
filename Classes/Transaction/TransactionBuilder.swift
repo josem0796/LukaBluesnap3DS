@@ -30,7 +30,7 @@ class TransactionBuilder<Input, Progress, Output> {
     /**
      Registers the transaction successful callback
      */
-    func registryOnSuccess(action: @escaping (Output) -> Void) -> TransactionBuilder<Input, Progress, Output> {
+    public func registryOnSuccess(action: @escaping (Output) -> Void) -> TransactionBuilder<Input, Progress, Output> {
         onSuccess = action
         return self
     }
@@ -38,7 +38,7 @@ class TransactionBuilder<Input, Progress, Output> {
     /**
      Registers the transaction failure callback
      */
-    func registryOnError(action: @escaping (LukaErrors) -> Void) -> TransactionBuilder<Input, Progress, Output> {
+    public func registryOnError(action: @escaping (LukaErrors) -> Void) -> TransactionBuilder<Input, Progress, Output> {
         onError = action
         return self
     }
@@ -46,12 +46,12 @@ class TransactionBuilder<Input, Progress, Output> {
     /**
      Registers the transaction progress callback
      */
-    func registryOnProgress(action: @escaping (Progress) -> Void) -> TransactionBuilder<Input, Progress, Output> {
+    public func registryOnProgress(action: @escaping (Progress) -> Void) -> TransactionBuilder<Input, Progress, Output> {
         onProgress = action
         return self
     }
     
-    func execute() {
+    public func execute() {
         onBegin()
         response
             .take(1)
@@ -66,7 +66,7 @@ class TransactionBuilder<Input, Progress, Output> {
             .disposed(by: disposeBag)
     }
   
-    func onBegin() {
+    public func onBegin() {
         
     }
     

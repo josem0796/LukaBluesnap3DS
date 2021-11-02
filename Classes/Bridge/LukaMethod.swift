@@ -15,7 +15,7 @@ protocol LukaMethod {
 
 }
 
-class CreditCardMethod : LukaMethod {
+public class CreditCardMethod : LukaMethod {
     
     func gateway() -> LukaGateway {
         return BluesnapGateway()

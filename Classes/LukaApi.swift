@@ -28,7 +28,7 @@ public class LukaApi {
         self.isDebug = forDebug
     }
     
-    internal func setup(controller: UINavigationController) {
+    public func setup(controller: UINavigationController) {
         navController = controller
     }
     
@@ -206,7 +206,7 @@ public class LukaApi {
     /**
      Creates a new payment request
      */
-    func createPaymentRequest(params: LukaPaymentParams) -> TransactionBuilder<LukaPaymentRequest?, LukaTransactionProgress, LukaPaymentResult> {
+    public func createPaymentRequest(params: LukaPaymentParams) -> TransactionBuilder<LukaPaymentRequest?, LukaTransactionProgress, LukaPaymentResult> {
         
         let requestData = config()
             .asObservable()
@@ -244,7 +244,7 @@ public class LukaApi {
         
     }
     
-    func checkTransaction(traceId: String) -> TransactionBuilder<ApiResponse<[LukaPayment]>, Any?, LukaPaymentResult> {
+    public func checkTransaction(traceId: String) -> TransactionBuilder<ApiResponse<[LukaPayment]>, Any?, LukaPaymentResult> {
         
         let obs = Observable<ApiResponse<[LukaPayment]>>.create { observer in
         
@@ -333,12 +333,12 @@ public class LukaApi {
     /**
      Adds new card to Vault. if LukaCustomerId is nil, the customer will be created. Otherwise, the card will be added to the cystomer's vault
      */
-    func addCustomerCardRequest(email: String, lukaCustomerId: String? = nil) -> TransactionBuilder<LukaPaymentRequest?, LukaTransactionProgress, LukaPaymentResult> {
+    public func addCustomerCardRequest(email: String, lukaCustomerId: String? = nil) -> TransactionBuilder<LukaPaymentRequest?, LukaTransactionProgress, LukaPaymentResult> {
         let params = LukaCardVaultParams(customerId: lukaCustomerId, email: email)
         return createPaymentRequest(params: params)
     }
     
-    func indexCustomerCardsRequest(lukaCustomerId: String) -> TransactionBuilder<ApiResponse<[CreditCard]>, Any, [CreditCard]> {
+    public func indexCustomerCardsRequest(lukaCustomerId: String) -> TransactionBuilder<ApiResponse<[CreditCard]>, Any, [CreditCard]> {
         
         let traceId = "customerCardsRequest-\(lukaCustomerId)"
         
@@ -434,7 +434,7 @@ public class LukaApi {
         
     }
     
-    func deleteCustomerCard(cardId: UInt64, lukaCustomerId: String) -> TransactionBuilder<ApiResponse<Void>, Any, Void> {
+    public func deleteCustomerCard(cardId: UInt64, lukaCustomerId: String) -> TransactionBuilder<ApiResponse<Void>, Any, Void> {
         
         let traceId = "deleteCustomerCardsRequest-\(lukaCustomerId)"
         

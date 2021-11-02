@@ -12,12 +12,12 @@ public class LukaAuthCredentials: Codable {
     var userName: String
     var password: String
     
-    init() {
+    public init() {
         self.userName = ""
         self.password = ""
     }
  
-    init(userName: String, password: String) {
+    public init(userName: String, password: String) {
         self.userName = userName
         self.password = password
     }
