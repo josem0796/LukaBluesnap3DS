@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CreditCard: Codable {
+public struct CreditCard: Codable {
     
     let bin: String?
     let category: String?
@@ -45,7 +45,7 @@ struct CreditCard: Codable {
         case last4 = "UltimosCuatroDigitos"
     }
     
-    var currency: LukaCurrency {
+    public var currency: LukaCurrency {
         return LukaCurrency.from(iso: _currency)
     }
     

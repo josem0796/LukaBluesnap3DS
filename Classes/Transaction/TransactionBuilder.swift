@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class TransactionBuilder<Input, Progress, Output> {
+public class TransactionBuilder<Input, Progress, Output> {
     
     var onSuccess: ((Output) -> Void)? = nil
     var onError: ((LukaErrors) -> Void)? = nil

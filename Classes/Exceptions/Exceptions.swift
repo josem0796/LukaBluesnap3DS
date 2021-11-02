@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LukaErrors: Error {
+public enum LukaErrors: Error {
     case transactionSetupFailedException
     case unknownActionForBridge(action: String, bridge: String)
     case errorProcessingTransaction(apiError: ApiError?)
@@ -31,7 +31,7 @@ struct ApiError : Codable {
 
 extension LukaErrors {
     
-    var message: String {
+    public var message: String {
         switch self {
         case .transactionSetupFailedException:
             return "SDK setup failed"

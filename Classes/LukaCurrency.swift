@@ -7,18 +7,18 @@
 
 import Foundation
 
-internal struct LukaCurrency: Codable {
+public struct LukaCurrency: Codable {
     
     let iso: String
     let symbol: String
     
-    static let usd = LukaCurrency(iso: "USD", symbol: "$")
+    public static let usd = LukaCurrency(iso: "USD", symbol: "$")
     
     enum CodingKeys: String, CodingKey {
         case iso, symbol
     }
     
-    static func from(iso: String?) -> LukaCurrency {
+    public static func from(iso: String?) -> LukaCurrency {
         if iso == usd.iso {
             return usd
         } else {
