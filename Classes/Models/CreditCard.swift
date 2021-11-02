@@ -9,22 +9,22 @@ import Foundation
 
 public struct CreditCard: Codable {
     
-    let bin: String?
-    let category: String?
-    let city: String?
-    let description: String?
-    let address: Address?
-    let zipCode: String?
-    let thisVault: Bool?
-    let state: String?
-    let expiresAt: String?
-    let id: UInt64
-    let statusId: Int?
+    public let bin: String?
+    public let category: String?
+    public let city: String?
+    public let description: String?
+    public let address: Address?
+    public let zipCode: String?
+    public let thisVault: Bool?
+    public let state: String?
+    public let expiresAt: String?
+    public let id: UInt64
+    public let statusId: Int?
     let _currency: String?
-    let countryCode: String?
-    let subType: String?
-    let type: String
-    let last4: String
+    public let countryCode: String?
+    public let subType: String?
+    public let type: String
+    public let last4: String
     
     enum CodingKeys: String, CodingKey {
         case bin = "Bin"

@@ -17,6 +17,10 @@ protocol LukaMethod {
 
 public class CreditCardMethod : LukaMethod {
     
+    public init() {
+        
+    }
+    
     func gateway() -> LukaGateway {
         return BluesnapGateway()
     }

@@ -9,12 +9,12 @@ import Foundation
 
 public struct LukaPaymentResult {
     
-    let method: LukaMethod
-    let amount: Double
-    let currency: LukaCurrency
-    let traceId: String
-    let charged: Bool
-    let customerId: String?
+    public let method: LukaMethod
+    public let amount: Double
+    public let currency: LukaCurrency
+    public let traceId: String
+    public let charged: Bool
+    public let customerId: String?
     
     init(data: LukaPayment) {
         self.method = CreditCardMethod()
