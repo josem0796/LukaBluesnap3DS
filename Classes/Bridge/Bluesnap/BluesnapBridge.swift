@@ -295,7 +295,7 @@ extension BluesnapBridge {
                 if lukaPayment.isSuccessful {
                     return LukaBridgeResponse(action: .finishSuccess, payload: LukaPaymentResult(data: lukaPayment))
                 } else {
-                    return LukaBridgeResponse(action: .finishError, payload: LukaPaymentResult(data: lukaPayment))
+                    return LukaBridgeResponse(action: .finishError, payload: LukaErrors.errorProcessingTransaction(apiError: ApiError(message: lukaPayment.description, code: 200)))
                 }
             }
             .onError { error in

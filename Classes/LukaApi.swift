@@ -536,7 +536,7 @@ extension LukaApi {
             let item = try JSONDecoder().decode(type, from: data)
             return item
         } catch {
-            print("deserialize ERROR Deserializing")
+            print("deserialize ERROR Deserializing \(error)")
             let stringRep = String(data: data, encoding: .utf8)
             print("String representation: \(stringRep)")
             return nil

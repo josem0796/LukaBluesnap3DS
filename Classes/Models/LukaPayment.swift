@@ -14,7 +14,7 @@ public struct LukaPayment: Codable {
     let isSuccessful: Bool
     let processInfo: LukaProcessInfo?
     let creditCard: CreditCard?
-    let userInfo: LukaPayer
+    let userInfo: LukaPayer?
     let paymentMethod: String
     let _currency: String
     let amount: Double
