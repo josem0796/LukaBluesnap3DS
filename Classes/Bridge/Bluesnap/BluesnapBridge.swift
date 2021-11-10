@@ -193,11 +193,29 @@ extension BluesnapBridge {
                 
                 if let navController = self.api.navController {
                     do {
+                        
                         try BlueSnapSDK.showCheckoutScreen(
                             inNavigationController: navController,
                             animated: true,
                             sdkRequest: sdkRequest
                         )
+                       
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            
+                            let foundController = navController.viewControllers.first { (controller: UIViewController) in
+                                let controllerClassName = String(describing: type(of: controller))
+                                return controllerClassName == "BSPaymentViewController"
+                            }
+                            
+                            if let bsPaymentViewController = foundController {
+                                if let aView = bsPaymentViewController.view {
+                                    let form = BSForm(rootView: aView)
+                                    form.style()
+                                }
+                            }
+                            
+                        }
+                        
                     } catch {
                         print("error charging \(error)")
                         return Observable.error(LukaErrors.unknownError)
@@ -209,6 +227,87 @@ extension BluesnapBridge {
                 return resultObs.asObservable()
                 
             }
+        
+    }
+    
+    private class BSForm {
+        
+        static let fieldVerticalMargin = CGFloat(8.0)
+        
+        let root: UIView!
+        
+        init(rootView: UIView) {
+            self.root = rootView
+        }
+        
+        func getCardInputField() -> UIView? {
+            return root.viewWithTag(1)
+        }
+        
+        func getNameField() -> UIView? {
+            return root.viewWithTag(2)
+        }
+        
+        func getEmailField() -> UIView? {
+            return root.viewWithTag(3)
+        }
+        
+        func getZipField() -> UIView? {
+            return root.viewWithTag(4)
+        }
+        
+        func getAddressField() -> UIView? {
+            return root.viewWithTag(5)
+        }
+        
+        func getCityField() -> UIView? {
+            return root.viewWithTag(6)
+        }
+        
+        func getStateField() -> UIView? {
+            // the state field hasn't tag to be selected
+            return getCityField()?.superview?.subviews.last(where: { view in
+                if let _ = view as? BluesnapSDK.BSBaseTextInput {
+                    return true
+                }
+                return false
+            })
+        }
+        
+        func style() {
+            
+            marginForRelation(first: getEmailField(), second: getNameField())
+            marginForRelation(first: getZipField(), second: getEmailField())
+            marginForRelation(first: getAddressField(), second: getZipField())
+            marginForRelation(first: getCityField(), second: getAddressField())
+            marginForRelation(first: getStateField(), second: getCityField())
+            
+            root.layoutSubviews()
+            root.layoutIfNeeded()
+            
+        }
+        
+        private func alterMargin(constraint: NSLayoutConstraint) {
+            constraint.constant = BSForm.fieldVerticalMargin
+        }
+        
+        func marginForRelation(first: UIView?, second: UIView?) {
+            
+            guard let firstField = first, let secondField = second else { return }
+            
+            let constraints = firstField.constraintsAffectingLayout(for: .vertical)
+            
+            constraints.forEach { constraint in
+                if let constraintFirtsItem = constraint.firstItem as? UIView,
+                   let constraintSecondItem = constraint.secondItem as? UIView {
+                    if constraintFirtsItem.tag == firstField.tag && constraintSecondItem.tag == secondField.tag {
+                        alterMargin(constraint: constraint)
+                        return
+                    }
+                }
+            }
+            
+        }
         
     }
     
