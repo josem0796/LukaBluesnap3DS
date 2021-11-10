@@ -245,7 +245,7 @@ extension BluesnapBridge {
                 zipCode: nil,
                 thisVault: nil,
                 state: nil,
-                expiresAt: purchaseDetails.creditCard.getExpiration(),
+                expiresAt: purchaseDetails.creditCard.getExpiration().replacingOccurrences(of: " ", with: ""),
                 id: 0,
                 statusId: nil,
                 _currency: nil,
