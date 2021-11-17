@@ -170,12 +170,12 @@ extension BluesnapBridge {
                 
                 let priceDetails = BSPriceDetails(amount: params.amount, taxAmount: 0.0, currency: params.currency.iso)
                 
-                let billingDetails = BSBillingAddressDetails(email: params.email, name: "", address: nil, city: nil, zip: nil, country: nil, state: nil)
+                let billingDetails = BSBillingAddressDetails(email: nil, name: "", address: nil, city: nil, zip: nil, country: nil, state: nil)
                 
                 let sdkRequest = BSSdkRequest(
-                    withEmail: true,
+                    withEmail: false,
                     withShipping: false,
-                    fullBilling: true,
+                    fullBilling: false,
                     priceDetails: priceDetails,
                     billingDetails: billingDetails,
                     shippingDetails: nil,
@@ -276,11 +276,31 @@ extension BluesnapBridge {
         
         func style() {
             
-            marginForRelation(first: getEmailField(), second: getNameField())
+            guard let zip = getZipField(), let name = getNameField() else  { return }
+            
+            // marginForRelation(first: getEmailField(), second: getNameField())
             marginForRelation(first: getZipField(), second: getEmailField())
-            marginForRelation(first: getAddressField(), second: getZipField())
-            marginForRelation(first: getCityField(), second: getAddressField())
-            marginForRelation(first: getStateField(), second: getCityField())
+            //marginForRelation(first: getAddressField(), second: getZipField())
+            //marginForRelation(first: getCityField(), second: getAddressField())
+            //marginForRelation(first: getStateField(), second: getCityField())
+            
+            if let input = getCardInputField() as? BSCcInputLine {
+                let fields = input.subviews.filter { view in
+                    if let _ = view as? UITextField {
+                        return true
+                    }
+                    return false
+                }
+                
+                fields.forEach { view in
+                    if let viewField = view as? UITextField {
+                        //viewField.placeholder = ""
+                    }
+                    view.layer.borderWidth = 0.5
+                    view.layer.cornerRadius = 3
+                    view.layer.borderColor = UIColor.systemBlue.cgColor
+                }
+            }
             
             root.layoutSubviews()
             root.layoutIfNeeded()
@@ -301,7 +321,13 @@ extension BluesnapBridge {
                 if let constraintFirtsItem = constraint.firstItem as? UIView,
                    let constraintSecondItem = constraint.secondItem as? UIView {
                     if constraintFirtsItem.tag == firstField.tag && constraintSecondItem.tag == secondField.tag {
-                        alterMargin(constraint: constraint)
+                        if constraintFirtsItem.tag == 4 && constraintSecondItem.tag == 3 { // email field
+                            if let nameField = getNameField() {
+                                constraint.constant = -nameField.bounds.height + BSForm.fieldVerticalMargin
+                            }
+                        } else {
+                            alterMargin(constraint: constraint)
+                        }
                         return
                     }
                 }
