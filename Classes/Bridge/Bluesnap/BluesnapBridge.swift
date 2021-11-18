@@ -285,6 +285,7 @@ extension BluesnapBridge {
             //marginForRelation(first: getStateField(), second: getCityField())
             
             if let input = getCardInputField() as? BSCcInputLine {
+                
                 let fields = input.subviews.filter { view in
                     if let _ = view as? UITextField {
                         return true
@@ -294,12 +295,17 @@ extension BluesnapBridge {
                 
                 fields.forEach { view in
                     if let viewField = view as? UITextField {
-                        //viewField.placeholder = ""
+                        let placeHolderText = viewField.placeholder ?? ""
+                        viewField.attributedPlaceholder = NSAttributedString(
+                            string: placeHolderText,
+                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
+                        )
                     }
                     view.layer.borderWidth = 0.5
                     view.layer.cornerRadius = 3
                     view.layer.borderColor = UIColor.systemBlue.cgColor
                 }
+                
             }
             
             root.layoutSubviews()
