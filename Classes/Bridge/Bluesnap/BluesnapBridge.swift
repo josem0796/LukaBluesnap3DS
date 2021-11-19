@@ -170,7 +170,7 @@ extension BluesnapBridge {
                 
                 let priceDetails = BSPriceDetails(amount: params.amount, taxAmount: 0.0, currency: params.currency.iso)
                 
-                let billingDetails = BSBillingAddressDetails(email: nil, name: "", address: nil, city: nil, zip: nil, country: nil, state: nil)
+                let billingDetails = BSBillingAddressDetails(email: params.email, name: "", address: nil, city: nil, zip: nil, country: nil, state: nil)
                 
                 let sdkRequest = BSSdkRequest(
                     withEmail: false,
