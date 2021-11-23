@@ -172,6 +172,12 @@ extension BluesnapBridge {
                 
                 let billingDetails = BSBillingAddressDetails(email: params.email, name: "", address: nil, city: nil, zip: nil, country: nil, state: nil)
                 
+                var mode: BSForm.Mode = .pay
+                
+                if request.params is LukaCardVaultParams {
+                    mode = .storeCard
+                }
+                
                 let sdkRequest = BSSdkRequest(
                     withEmail: false,
                     withShipping: false,
@@ -210,7 +216,7 @@ extension BluesnapBridge {
                             if let bsPaymentViewController = foundController {
                                 if let aView = bsPaymentViewController.view {
                                     let form = BSForm(rootView: aView)
-                                    form.style()
+                                    form.style(mode: mode)
                                 }
                             }
                             
@@ -274,7 +280,16 @@ extension BluesnapBridge {
             })
         }
         
-        func style() {
+        func getPayButton() -> UIView? {
+            return root.subviews.first { view in
+                if let _ = view as? UIButton {
+                    return true
+                }
+                return false
+            }
+        }
+        
+        func style(mode: Mode) {
             
             guard let zip = getZipField(), let name = getNameField() else  { return }
             
@@ -308,6 +323,15 @@ extension BluesnapBridge {
                 
             }
             
+            // payment button styling
+            let payButton = getPayButton()
+            
+            payButton?.backgroundColor = colorFromHexString(hexString: "#196076")
+            
+            if case .storeCard = mode {
+                (payButton as? UIButton)?.setTitle("Registrar Tarjeta", for: .normal)
+            }
+            
             root.layoutSubviews()
             root.layoutIfNeeded()
             
@@ -339,6 +363,36 @@ extension BluesnapBridge {
                 }
             }
             
+        }
+        
+        public func colorFromHexString(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+
+            // Convert hex string to an integer
+            let hexint = Int(self.intFromHexString(hexStr: hexString))
+            let red = CGFloat((hexint & 0xff0000) >> 16) / 255.0
+            let green = CGFloat((hexint & 0xff00) >> 8) / 255.0
+            let blue = CGFloat((hexint & 0xff) >> 0) / 255.0
+            
+            // Create color object, specifying alpha as well
+            let color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+            return color
+        
+        }
+        
+        private func intFromHexString(hexStr: String) -> UInt32 {
+            var hexInt: UInt32 = 0
+            // Create scanner
+            let scanner: Scanner = Scanner(string: hexStr)
+            // Tell scanner to skip the # character
+            scanner.charactersToBeSkipped = CharacterSet(charactersIn: "#")
+            // Scan hex value
+            scanner.scanHexInt32(&hexInt)
+            return hexInt
+        }
+        
+        enum Mode {
+            case pay
+            case storeCard
         }
         
     }
