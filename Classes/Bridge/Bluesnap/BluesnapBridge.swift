@@ -107,7 +107,7 @@ extension BluesnapBridge {
                 generateTokenFunc: self.retrieveAndSetNewBSToken,
                 initKount: true,
                 fraudSessionId: nil,
-                applePayMerchantIdentifier: "merchant.com.example.bluesnap",
+                applePayMerchantIdentifier: nil,
                 merchantStoreCurrency: "USD",
                 completion: { error in
                     if let error = error {
@@ -451,7 +451,7 @@ extension BluesnapBridge {
             let transaction = LukaTransaction(
                 cardOwnerEmail: billingDetails?.email,
                 channelId: LukaTransaction.iosChannel,
-                traceId: request.session.id,
+                traceId: request.params.customTraceId ?? request.session.id,
                 currency: payload.getCurrency(),
                 amount: payload.getAmount(),
                 ref: "",
@@ -499,7 +499,7 @@ extension BluesnapBridge {
         let transaction = LukaTransaction(
             cardOwnerEmail: request.params.email ?? params.email,
             channelId: LukaTransaction.iosChannel,
-            traceId: request.session.id,
+            traceId: params.customTraceId ?? request.session.id,
             currency: params.currency.iso,
             amount: params.amount,
             ref: nil,

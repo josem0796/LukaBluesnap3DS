@@ -34,12 +34,15 @@ public class LukaPaymentParams {
      */
     var enable3DSecureAuthentication: Bool = false
     
-    public init(method: CreditCardMethod, amount: Double, currency: LukaCurrency, email: String? = nil, enable3DSecureAuthentication: Bool = false) {
+    var customTraceId: String? = nil
+    
+    public init(method: CreditCardMethod, amount: Double, currency: LukaCurrency, email: String? = nil, enable3DSecureAuthentication: Bool = false, customTraceId: String? = nil) {
         self.method = method
         self.amount = amount
         self.currency = currency
         self.email = email
         self.enable3DSecureAuthentication = enable3DSecureAuthentication
+        self.customTraceId = customTraceId
     }
     
 }
