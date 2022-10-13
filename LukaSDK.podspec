@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'LukaSDK'
+  s.name             = 'LukaBluesnapSDK'
   s.version          = '0.2.2'
   s.summary          = 'Payments SDK'
 
@@ -34,8 +34,8 @@ Pod::Spec.new do |s|
   
   s.swift_version = '5'
   
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+#  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+#  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   # s.resource_bundles = {
   #   'LukaSDK' => ['LukaSDK/Assets/*.png']
