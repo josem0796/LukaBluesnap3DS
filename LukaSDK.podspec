@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LukaBluesnapSDK'
-  s.version          = '0.2.2'
+  s.version          = '0.0.2'
   s.summary          = 'Payments SDK'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   Luka SDK for payments
                        DESC
 
-  s.homepage         = 'https://github.com/josegmanzanares/LukaSDK'
+  s.homepage         = 'https://github.com/josem0796/LukaBluesnap3DS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'josegmanzanares' => 'joseg@manzanares.com.ve' }
-  s.source           = { :git => 'https://github.com/josegmanzanares/LukaSDK.git', :tag => s.version.to_s }
+  s.author           = { 'josemoran' => 'jmoran@lukapay.io' }
+  s.source           = { :git => 'https://github.com/josem0796/LukaBluesnap3DS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.1'

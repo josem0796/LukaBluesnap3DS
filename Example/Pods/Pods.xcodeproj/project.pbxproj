@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,9 @@
 		3929F75C2718C20F005FCB42 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929F74C2718C20F005FCB42 /* Types.swift */; };
 		3B0D206113EFB6579248C8F33A6D135D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		64727D7F5D4D1733179EC5D0C8D5006B /* LukaSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC36D49E42BD1F31266C42B55C880C00 /* LukaSDK-dummy.m */; };
+		8216345A2937CFDC008FF779 /* CardinalMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821634592937CFDC008FF779 /* CardinalMobile.xcframework */; };
+		8216345B2937CFDC008FF779 /* CardinalMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821634592937CFDC008FF779 /* CardinalMobile.xcframework */; };
+		8216345C2937CFDC008FF779 /* CardinalMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821634592937CFDC008FF779 /* CardinalMobile.xcframework */; };
 		98E61A07156E1BA139FECA96D9FDDD4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		A6EC07E758D046F0087C1EA95634AE18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		AF183D05D20BB7654CEE9D7825B04068 /* Pods-LukaSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2326F86379782A1A3D31D2F93D78284 /* Pods-LukaSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,6 +85,7 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75B68B60ECDA34C7FB17DA4F82EA4FF1 /* Pods-LukaSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LukaSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		787189853C3C20037B6B336D7A5804EB /* Pods-LukaSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LukaSDK_Example-dummy.m"; sourceTree = "<group>"; };
+		821634592937CFDC008FF779 /* CardinalMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CardinalMobile.xcframework; sourceTree = "<group>"; };
 		854EE1E56A711347D140FC00B2A085F8 /* Pods-LukaSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LukaSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8A154DF23F748CE2E7306CBA11CE59B3 /* Pods-LukaSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LukaSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8AD6AFB477CE1BDBFF380A69A4B5B5DB /* Pods-LukaSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LukaSDK_Tests.modulemap"; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E61A07156E1BA139FECA96D9FDDD4B /* Foundation.framework in Frameworks */,
+				8216345A2937CFDC008FF779 /* CardinalMobile.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0D206113EFB6579248C8F33A6D135D /* Foundation.framework in Frameworks */,
+				8216345C2937CFDC008FF779 /* CardinalMobile.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6EC07E758D046F0087C1EA95634AE18 /* Foundation.framework in Frameworks */,
+				8216345B2937CFDC008FF779 /* CardinalMobile.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +257,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				821634592937CFDC008FF779 /* CardinalMobile.xcframework */,
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
@@ -487,7 +495,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-LukaSDK_Example/Pods-LukaSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LukaSDK_Example/Pods-LukaSDK_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -520,7 +532,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-LukaSDK_Example/Pods-LukaSDK_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LukaSDK_Example/Pods-LukaSDK_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -618,7 +634,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-LukaSDK_Tests/Pods-LukaSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LukaSDK_Tests/Pods-LukaSDK_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -652,7 +672,11 @@
 				INFOPLIST_FILE = "Target Support Files/LukaSDK/LukaSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/LukaSDK/LukaSDK.modulemap";
 				PRODUCT_MODULE_NAME = LukaSDK;
 				PRODUCT_NAME = LukaSDK;
@@ -722,7 +746,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -745,7 +770,11 @@
 				INFOPLIST_FILE = "Target Support Files/LukaSDK/LukaSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/LukaSDK/LukaSDK.modulemap";
 				PRODUCT_MODULE_NAME = LukaSDK;
 				PRODUCT_NAME = LukaSDK;
@@ -776,7 +805,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-LukaSDK_Tests/Pods-LukaSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LukaSDK_Tests/Pods-LukaSDK_Tests.modulemap";
 				OTHER_LDFLAGS = "";
