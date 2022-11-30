@@ -13,7 +13,7 @@ class LukaCardVaultParams : LukaPaymentParams {
     
     init(customerId: String?, email: String) {
         self.lukaCustomerId = customerId
-        super.init(method: CreditCardMethod(), amount: 1.0, currency: LukaCurrency.usd, email: email, enable3DSecureAuthentication: false)
+        super.init(method: CreditCardMethod(), amount: 1.0, currency: LukaCurrency.usd, email: email, enable3DSecureAuthentication: true)
     }
     
 }
