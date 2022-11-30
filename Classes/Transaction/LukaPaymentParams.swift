@@ -32,7 +32,7 @@ public class LukaPaymentParams {
     /**
      Enablee 3D secure authentication
      */
-    var enable3DSecureAuthentication: Bool = false
+    var enable3DSecureAuthentication: Bool = true
     
     var customTraceId: String? = nil
     
