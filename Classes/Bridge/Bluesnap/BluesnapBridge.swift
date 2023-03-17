@@ -326,7 +326,7 @@ extension BluesnapBridge {
             // payment button styling
             let payButton = getPayButton()
             
-            payButton?.backgroundColor = colorFromHexString(hexString: "#196076")
+            payButton?.backgroundColor = colorFromHexString(hexString: "#0878FF")
             
             if case .storeCard = mode {
                 (payButton as? UIButton)?.setTitle("Registrar Tarjeta", for: .normal)
